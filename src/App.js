@@ -943,9 +943,9 @@ function ContactSection() {
 /* ─── APP ─── */
 export default function App() {
   const [active, setActive] = useState("hero");
-  const ids = ["hero","story","work","clients","skills","projects","contact"];
 
   useEffect(() => {
+    const ids = ["hero","story","work","clients","skills","projects","contact"];
     const io = new IntersectionObserver(
       entries => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); }),
       { threshold: 0.3 }
